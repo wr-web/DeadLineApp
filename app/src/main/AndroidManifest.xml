@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.deadline">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icon_kkk"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icon_kkk_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DeadLine">
+        <service android:name=".notification.Notification"/>
+        <activity
+            android:name=".ChDataActivity"
+            android:label="@string/title_activity_ch_data"
+            android:theme="@style/Theme.DeadLine.NoActionBar"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.DeadLine.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
